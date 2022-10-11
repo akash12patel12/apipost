@@ -6,10 +6,10 @@ function addData(e){
     var newName = document.getElementById("name").value;
     var newEmail = document.getElementById("email").value;
     let obj = {
-        Name : newName,
-        Email : newEmail
+        newName,
+        newEmail
     };
-    localStorage.setItem("obj", obj);
+    localStorage.setItem("obj", JSON.stringify(obj));
 
    console.log(localStorage);
 }
