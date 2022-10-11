@@ -9,7 +9,9 @@ function addData(e){
         newName,
         newEmail
     };
-    localStorage.setItem(newEmail, JSON.stringify(obj));
+    if(localStorage.getItem(newEmail)) alert("Already exist");
 
+   else  localStorage.setItem(newEmail, JSON.stringify(obj));
+    
    console.log(localStorage);
 }
