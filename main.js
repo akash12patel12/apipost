@@ -9,7 +9,7 @@ function addData(e){
         newName,
         newEmail
     };
-    localStorage.setItem("obj", JSON.stringify(obj));
+    localStorage.setItem(newEmail, JSON.stringify(obj));
 
    console.log(localStorage);
 }
