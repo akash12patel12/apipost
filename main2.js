@@ -36,7 +36,7 @@ function getAll() {
 
       users.forEach((user) => {
         const childHTML = `<li id=${user.email}> ${user.name} - ${user.email}
-    <button onclick=deleteUser('${user.id}')> Delete User </button>
+    <button onclick=deleteUser('${user._id}')> Delete User </button>
  </li>`;
         parentNode.innerHTML = parentNode.innerHTML + childHTML;
       });
