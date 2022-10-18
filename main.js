@@ -11,6 +11,7 @@ function saveToLocalStorage(event) {
         email,
         phonenumber
     }
+    // axios.post("https://crudcrud.com/api/4747191ff2384b96b9096592edfbea44/sample",obj).then(res=>console.log("connected")).catcth(err=>console.log(err))
     localStorage.setItem(obj.email, JSON.stringify(obj))
     showNewUserOnScreen(obj)
 }
@@ -28,7 +29,8 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 function showNewUserOnScreen(user){
-    const parentNode = document.getElementById('listOfUsers');
+    const parentNode = document.getElementById('users');
+
     const childHTML = `<li id=${user.email}> ${user.name} - ${user.email}
                             <button onclick=deleteUser('${user.email}')> Delete User </button>
                          </li>`
